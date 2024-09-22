@@ -1,0 +1,16 @@
+version: 2
+updates:
+  - package-ecosystem: "github-actions"
+    directory: "/"
+    schedule:
+      interval: "monthly"
+    groups:
+      GH actions:
+        dependency-type: production
+  - package-ecosystem: "npm"
+    directory: "/root/server"
+    schedule:
+      interval: "monthly"
+    groups:
+      npm:
+        dependency-type: production
